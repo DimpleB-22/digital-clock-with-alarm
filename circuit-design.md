@@ -29,46 +29,29 @@ The design uses a 555 timer as the clock pulse generator along with counter, log
 
 ---
 
-## 3. Block Diagram
+### 3. Block Diagram
 
 ```text
 +------------------+
 |    555 TIMER     |
 | Clock Generator  |
-+--------+---------+
-         |
-         v
++------------------+
+        |
+        v
 +------------------+
 | Seconds Counter  |
-+--------+---------+
-         |
-         v
 +------------------+
-| Minutes Counter  |
-+--------+---------+
-         |
-         v
-+------------------+
-|  Hours Counter   |
-+--------+---------+
-         |
-         v
-+------------------+
-| 7-Segment Display|
-+------------------+
+        |
+        v
+...
+        |
+        v
+      Buzzer
+```
 
-      Alarm Setting
-           |
-           v
-+------------------+
-|   Alarm Logic    |
-+--------+---------+
-         |
-         v
-       Buzzer
+## 4. Working Principle
 
-4. Working Principle
-4.1 Clock Pulse Generation
+### 4.1 Clock Pulse Generation
 
 The NE555 timer is configured to generate periodic clock pulses. These pulses provide the timing signal required for the digital clock.
 
